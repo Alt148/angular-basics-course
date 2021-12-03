@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'angular-basics-course-root',
+  selector: 'abs-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

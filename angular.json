@@ -5,7 +5,7 @@
       "projectType": "application",
       "root": "apps/angular-basics-course",
       "sourceRoot": "apps/angular-basics-course/src",
-      "prefix": "angular-basics-course",
+      "prefix": "abs",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

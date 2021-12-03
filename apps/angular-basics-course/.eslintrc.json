@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "angular-basics-course",
+            "prefix": "abs",
             "style": "kebab-case"
           }
         ]
