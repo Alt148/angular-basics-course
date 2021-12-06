@@ -1,0 +1,5 @@
+<label for="joke-categories">Select category </label>
+<select id="joke-categories" [(ngModel)]="jokeCategory" (ngModelChange)="changeCategory()">
+  <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+</select>
+<button id="clear-button" (click)="clearCategory()">Clear category</button>
