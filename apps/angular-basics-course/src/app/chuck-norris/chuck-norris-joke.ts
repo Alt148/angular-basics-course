@@ -3,4 +3,5 @@ export interface ChuckNorrisJokeResponse {
   id: string;
   url: string;
   value: string;
+  created_at: string;
 }

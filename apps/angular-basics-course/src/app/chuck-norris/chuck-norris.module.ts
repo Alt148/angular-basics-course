@@ -7,6 +7,7 @@ import { ChuckNorrisJokeService } from './chuck-norris-joke.service';
 import { GetJokeComponent } from './get-joke/get-joke.component';
 import { GetCategoryJokeComponent } from './get-category-joke/get-category-joke.component';
 import { HighlightChuckNorrisDirective } from './highlight-chuck-norris/highlight-chuck-norris.directive';
+import { ShowDatePipe } from './show-date.pipe';
 
 
 
@@ -15,7 +16,8 @@ import { HighlightChuckNorrisDirective } from './highlight-chuck-norris/highligh
     ChuckNorrisComponent,
     GetJokeComponent,
     GetCategoryJokeComponent,
-    HighlightChuckNorrisDirective
+    HighlightChuckNorrisDirective,
+    ShowDatePipe
   ],
   imports: [
     CommonModule,
