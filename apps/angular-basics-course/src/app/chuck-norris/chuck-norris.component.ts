@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ChuckNorrisJokeResponse } from './chuck-norris-joke';
 import { ChuckNorrisJokeService } from './chuck-norris-joke.service';
@@ -9,13 +9,13 @@ import { ChuckNorrisJokeService } from './chuck-norris-joke.service';
   templateUrl: './chuck-norris.component.html',
   styleUrls: ['./chuck-norris.component.scss']
 })
-export class ChuckNorrisComponent implements OnInit {
+export class ChuckNorrisComponent implements AfterViewInit {
 
   jokeResponse!: Observable<ChuckNorrisJokeResponse>;
 
   constructor(private chuckNorrisService: ChuckNorrisJokeService) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.jokeResponse = this.chuckNorrisService.getJoke();
   }
 

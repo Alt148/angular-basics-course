@@ -6,6 +6,7 @@ import { ChuckNorrisComponent } from './chuck-norris.component';
 import { ChuckNorrisJokeService } from './chuck-norris-joke.service';
 import { GetJokeComponent } from './get-joke/get-joke.component';
 import { GetCategoryJokeComponent } from './get-category-joke/get-category-joke.component';
+import { HighlightChuckNorrisDirective } from './highlight-chuck-norris/highlight-chuck-norris.directive';
 
 
 
@@ -13,7 +14,8 @@ import { GetCategoryJokeComponent } from './get-category-joke/get-category-joke.
   declarations: [
     ChuckNorrisComponent,
     GetJokeComponent,
-    GetCategoryJokeComponent
+    GetCategoryJokeComponent,
+    HighlightChuckNorrisDirective
   ],
   imports: [
     CommonModule,

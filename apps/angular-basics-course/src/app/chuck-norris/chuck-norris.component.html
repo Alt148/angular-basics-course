@@ -1,6 +1,6 @@
 <ng-container *ngIf="jokeResponse | async as joke; else loading">
   <img [src]="joke.icon_url" alt="Chuck Norris Icon"/>
-  <blockquote  cite="Chuck Norris">{{ joke.value }}</blockquote>
+  <blockquote  cite="Chuck Norris" [absHighlightChuckNorris]="joke.value"></blockquote>
   <abs-get-category-joke></abs-get-category-joke>
   <abs-get-joke (joke)="getRandomJoke()"></abs-get-joke>
 </ng-container>
