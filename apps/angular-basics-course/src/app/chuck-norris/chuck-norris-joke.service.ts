@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ChuckNorrisJokeResponse } from './chuck-norris-joke';
-import { delay } from 'rxjs';
+import { BehaviorSubject, delay } from 'rxjs';
 import { JokeCategories } from './get-category-joke/joke-categories';
 
 
@@ -9,6 +9,7 @@ import { JokeCategories } from './get-category-joke/joke-categories';
 export class ChuckNorrisJokeService {
 
   private _selectedCategory: JokeCategories | null = null;
+  private _jokeCategory$ = new BehaviorSubject<JokeCategories | null>(null);
 
   constructor(private httpService: HttpClient) { }
 
@@ -19,9 +20,15 @@ export class ChuckNorrisJokeService {
   set selectedCategory(category: JokeCategories | null) {
     if (category) {
       this._selectedCategory = category;
+      this._jokeCategory$.next(category);
     } else {
       this._selectedCategory = null;
+      this._jokeCategory$.next(null);
     }
+  }
+
+  get jokeCategory$() {
+    return this._jokeCategory$;
   }
 
   getJoke() {
