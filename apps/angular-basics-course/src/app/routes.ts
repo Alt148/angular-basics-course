@@ -1,8 +1,10 @@
 import { Routes } from '@angular/router';
-import { ChuckNorrisComponent } from './chuck-norris/chuck-norris.component';
 import { IntroComponent } from './intro/intro.component';
 
 export const routes: Routes = [
-  { path: 'jokes', component: ChuckNorrisComponent },
+  {
+    path: 'jokes',
+    loadChildren: () => import('./chuck-norris/chuck-norris.module').then(m => m.ChuckNorrisModule)
+  },
   { path: '', component: IntroComponent, },
 ];
